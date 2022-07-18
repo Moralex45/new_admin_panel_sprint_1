@@ -4,6 +4,7 @@ from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.translation import gettext_lazy as _
 
+
 class TimeStampedMixin(models.Model):
     """Модель. Атрибуты создания и редактирования"""
 
@@ -45,20 +46,20 @@ class Filmwork(UUIDMixin, TimeStampedMixin):
     MAX_RATING = 100
 
     class Filmwork_types(models.TextChoices):
-        MOVIE = 'MV',('Movie')
-        TV_SHOW = 'TV',('TV Show')
+        MOVIE = 'MV', ('Movie')
+        TV_SHOW = 'TV', ('TV Show')
 
     title = models.CharField(_('title'), max_length=255)
     description = models.TextField(_('description'), blank=True)
     creation_date = models.DateField(_('creation date'), blank=True, null=True)
     rating = models.FloatField(
-        _('rating'), 
+        _('rating'),
         blank=True,
         validators=[
             MinValueValidator(MIN_RATING),
             MaxValueValidator(MAX_RATING)
         ]
-    ) 
+    )
     type = models.CharField(
         _('type'),
         max_length=2,
@@ -85,6 +86,7 @@ class GenreFilmwork(UUIDMixin):
     class Meta:
         db_table = "content\".\"genre_film_work"
 
+
 class Person(UUIDMixin, TimeStampedMixin):
     """"""
 
@@ -97,6 +99,7 @@ class Person(UUIDMixin, TimeStampedMixin):
 
     def __str__(self):
         return self.full_name
+
 
 class PersonFilmwork(UUIDMixin):
     film_work = models.ForeignKey('Filmwork', on_delete=models.CASCADE)

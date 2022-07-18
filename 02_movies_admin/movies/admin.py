@@ -3,11 +3,14 @@ from django.utils.translation import gettext_lazy as _
 
 from .models import Filmwork, Genre, GenreFilmwork, Person, PersonFilmwork
 
+
 class GenreFilmworkInline(admin.TabularInline):
     model = GenreFilmwork
 
+
 class PersonFilmworkInline(admin.TabularInline):
     model = PersonFilmwork
+
 
 @admin.register(Genre)
 class GenreAdmin(admin.ModelAdmin):
@@ -22,6 +25,7 @@ class FilmworkAdmin(admin.ModelAdmin):
     list_filter = ('type',)
     search_fields = ('title', 'description', 'id')
     list_prefetch_related = ('genres',)
+
 
 @admin.register(Person)
 class PersonAdmin(admin.ModelAdmin):
