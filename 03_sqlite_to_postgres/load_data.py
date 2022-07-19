@@ -34,10 +34,9 @@ def load_from_sqlite(sqlite_conn: sqlite3.Connection, pg_conn: _connection):
 
 
 if __name__ == '__main__':
-    with sqlite3.connect(
-            settings.SQLITE_DB_PATH
-        ) as sqlite_conn, \
-            psycopg2.connect(
-                **settings.dsl,
-                cursor_factory=DictCursor) as pg_conn:
-        load_from_sqlite(sqlite_conn, pg_conn)
+    with sqlite3.connect(settings.SQLITE_DB_PATH) as sqlite_conn:
+        with psycopg2.connect(
+            **settings.dsl,
+            cursor_factory=DictCursor
+        ) as pg_conn:
+            load_from_sqlite(sqlite_conn, pg_conn)
