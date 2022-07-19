@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-07 15:06+0000\n"
+"POT-Creation-Date: 2022-07-19 14:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,62 +18,78 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: movies/admin.py:42 movies/models.py:44
+msgid "genre"
+msgstr "Жанр"
+
 #: movies/apps.py:8
 msgid "movies"
 msgstr "Фильмы"
 
-#: movies/models.py:29
+#: movies/models.py:13
+msgid "actor"
+msgstr "Актер"
+
+#: movies/models.py:14
+msgid "director"
+msgstr "Режиссер"
+
+#: movies/models.py:15
+msgid "writer"
+msgstr "Сценарист"
+
+#: movies/models.py:39
 msgid "name"
 msgstr "Наименование"
 
-#: movies/models.py:30 movies/models.py:52
+#: movies/models.py:40 movies/models.py:58
 msgid "description"
 msgstr "Описание"
 
-#: movies/models.py:34
-msgid "genre"
-msgstr "Жанр"
-
-#: movies/models.py:35
+#: movies/models.py:45
 msgid "genres"
 msgstr "Жанры"
 
-#: movies/models.py:51
+#: movies/models.py:57
 msgid "title"
 msgstr "Название"
 
-#: movies/models.py:53
+#: movies/models.py:59
 msgid "creation date"
 msgstr "Дата создания"
 
-#: movies/models.py:55
+#: movies/models.py:61
 msgid "rating"
 msgstr "Рейтинг"
 
-#: movies/models.py:63
+#: movies/models.py:69
 msgid "type"
 msgstr "Тип"
 
-#: movies/models.py:71
+#: movies/models.py:74
+msgid "file"
+msgstr "Файл"
+
+#: movies/models.py:80
 msgid "film work"
 msgstr "Кинопроизведение"
 
-#: movies/models.py:72
+#: movies/models.py:81
 msgid "film works"
 msgstr "Кинопроизведения"
 
-#: movies/models.py:91
+#: movies/models.py:123
 msgid "full_name"
 msgstr "Полное имя"
 
-#: movies/models.py:95
+#: movies/models.py:127
 msgid "person"
 msgstr "Персона"
 
-#: movies/models.py:96
+#: movies/models.py:128
 msgid "persons"
 msgstr "Персоны"
 
-#: movies/models.py:104
+#: movies/models.py:143
 msgid "role"
 msgstr "Роль"
